@@ -1,0 +1,17 @@
+C:\Users\Perfi\Desktop\Environmental-monitoring\Environmental-monitoring\bin\Debug\Environmental-monitoring.exe.config
+C:\Users\Perfi\Desktop\Environmental-monitoring\Environmental-monitoring\bin\Debug\Environmental-monitoring.exe
+C:\Users\Perfi\Desktop\Environmental-monitoring\Environmental-monitoring\bin\Debug\Environmental-monitoring.pdb
+C:\Users\Perfi\Desktop\Environmental-monitoring\Environmental-monitoring\obj\Debug\Environmental-monitoring.csproj.AssemblyReference.cache
+C:\Users\Perfi\Desktop\Environmental-monitoring\Environmental-monitoring\obj\Debug\MainWindow.g.cs
+C:\Users\Perfi\Desktop\Environmental-monitoring\Environmental-monitoring\obj\Debug\App.g.cs
+C:\Users\Perfi\Desktop\Environmental-monitoring\Environmental-monitoring\obj\Debug\Environmental-monitoring_MarkupCompile.cache
+C:\Users\Perfi\Desktop\Environmental-monitoring\Environmental-monitoring\obj\Debug\Environmental-monitoring_MarkupCompile.lref
+C:\Users\Perfi\Desktop\Environmental-monitoring\Environmental-monitoring\obj\Debug\MainWindow.baml
+C:\Users\Perfi\Desktop\Environmental-monitoring\Environmental-monitoring\obj\Debug\Environmental-monitoring.g.resources
+C:\Users\Perfi\Desktop\Environmental-monitoring\Environmental-monitoring\obj\Debug\Environmental_monitoring.Properties.Resources.resources
+C:\Users\Perfi\Desktop\Environmental-monitoring\Environmental-monitoring\obj\Debug\Environmental-monitoring.csproj.GenerateResource.cache
+C:\Users\Perfi\Desktop\Environmental-monitoring\Environmental-monitoring\obj\Debug\Environmental-monitoring.csproj.CoreCompileInputs.cache
+C:\Users\Perfi\Desktop\Environmental-monitoring\Environmental-monitoring\obj\Debug\Environmental-monitoring.exe
+C:\Users\Perfi\Desktop\Environmental-monitoring\Environmental-monitoring\obj\Debug\Environmental-monitoring.pdb
+C:\Users\Perfi\Desktop\Environmental-monitoring\Environmental-monitoring\obj\Debug\UiWindows\UserLogin.g.cs
+C:\Users\Perfi\Desktop\Environmental-monitoring\Environmental-monitoring\obj\Debug\UiWindows\UserLogin.baml
