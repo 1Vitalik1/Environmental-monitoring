@@ -1,18 +1,6 @@
 ﻿using Environmental_monitoring.UiWindows;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Environmental_monitoring
 {
@@ -21,17 +9,26 @@ namespace Environmental_monitoring
     /// </summary>
     public partial class MainWindow : Window
     {
+        public bool auth = false;
         public MainWindow()
         {
             InitializeComponent();
         }
-
+        public void showWindow() => this.Opacity = 1;
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            this.Opacity = 0;
-            var window = new UserLogin();
-            window.Owner = this;
-            window.Show();
+            if (!auth)
+            {
+                string path = "authentication.ath";
+                if (!File.Exists(path))
+                {
+                    this.Opacity = 0;
+                    var window = new UserLogin();
+                    window.Owner = this;
+                    window.ShowDialog();
+                }
+                else auth = true;
+            }
         }
     }
 }
