@@ -43,8 +43,7 @@ namespace Environmental_monitoring
         }
 
         private void btn_addUser_Click(object sender, RoutedEventArgs e) => frame.Navigate(addUser);
-        private void btn_allUsers_Click(object sender, RoutedEventArgs e) { allUser = new AllUsers(); frame.Navigate(allUser); }
-
+        private void btn_allUsers_Click(object sender, RoutedEventArgs e) { allUser = new AllUsers(); frame.Navigate(allUser); } 
         private void btn_showAllReport_Click(object sender, RoutedEventArgs e) => frame.Navigate(showAllReport);
     }
 }
