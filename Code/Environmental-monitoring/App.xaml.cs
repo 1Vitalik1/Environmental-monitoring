@@ -13,5 +13,6 @@ namespace Environmental_monitoring
     /// </summary>
     public partial class App : Application
     {
+        public bool isAuthorized = false;
     }
 }

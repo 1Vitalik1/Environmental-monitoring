@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Perfi\Desktop\Environmental-monitoring\Code\Environmental-monitoring\App.xaml
-2385769576
+51913907658
 
-81037538327
+112101443533
 231917892043
-MainWindow.xaml;UiWindows\UserLogin.xaml;
+MainWindow.xaml;UiPage\AddUser.xaml;UiPage\AllUsers.xaml;UiPage\showAllReport.xaml;UiWindows\UserLogin.xaml;
 
 True
 

@@ -15,20 +15,20 @@
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0"></Grid>
                 <Grid Grid.Column="1">
-                    <Label x:Name="label_SQL_Status" HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="White" MouseDown="label_SQL_Status_MouseDown">Подключение к БД не установлено</Label>
+                    <Label x:Name="label_SQL_Status" HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="White">Подключение к БД не установлено</Label>
                     <Border Margin="30 120" Background="#181A24" CornerRadius="15">
                         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label HorizontalAlignment="Center" Foreground="White" FontSize="15" FontWeight="Black">Environmental-monitoring</Label>
                             <StackPanel Orientation="Horizontal" Margin="10">
                                 <Label Width="55" Foreground="White">Логин:</Label>
                                 <Border Width="150" BorderThickness="0,0,0,1" BorderBrush="#366EC0" CornerRadius="5">
-                                    <TextBox Background="Transparent" BorderThickness="0" Foreground="White" CaretBrush="WhiteSmoke"></TextBox>
+                                    <TextBox x:Name="TextBox_login" Background="Transparent" BorderThickness="0" Foreground="White" CaretBrush="WhiteSmoke"></TextBox>
                                 </Border>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10">
                                 <Label Width="55" Foreground="White">Пароль:</Label>
                                 <Border Width="150" BorderThickness="0,0,0,1" BorderBrush="#366EC0" CornerRadius="5">
-                                    <TextBox Background="Transparent" BorderThickness="0" Foreground="White" CaretBrush="WhiteSmoke"></TextBox>
+                                    <TextBox x:Name="TextBox_password" Background="Transparent" BorderThickness="0" Foreground="White" CaretBrush="WhiteSmoke"></TextBox>
                                 </Border>
                             </StackPanel>
                             <Border x:Name="btn_sand" Width="100" Height="25" Margin="15" Background="#366EC0" CornerRadius="1" MouseDown="btn_sand_MouseDown">

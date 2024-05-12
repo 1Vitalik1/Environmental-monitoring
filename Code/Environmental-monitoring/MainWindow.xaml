@@ -12,7 +12,32 @@
                 <DropShadowEffect Color="#366EC0" ShadowDepth="0" BlurRadius="50"/>
             </Border.Effect>
             <Grid>
-                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Frame x:Name="frame" NavigationUIVisibility="Hidden" Padding="10">
+                </Frame>
+                <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                    <Border Background="#366EC0" CornerRadius="2" Padding="2" Margin="10 0">
+                        <Border.Effect>
+                            <DropShadowEffect/>
+                        </Border.Effect>
+                        <Button x:Name="btn_allUsers" Background="Transparent" BorderThickness="0" Foreground="White" Click="btn_allUsers_Click">Список сотрудников</Button>
+                    </Border>
+                    <Border Background="#366EC0" CornerRadius="2" Padding="2" Margin="10 0">
+                        <Border.Effect>
+                            <DropShadowEffect/>
+                        </Border.Effect>
+                        <Button x:Name="btn_addUser" Background="Transparent" BorderThickness="0" Foreground="White" Click="btn_addUser_Click">Редактировать сотрудников</Button>
+                    </Border>
+                    <Border Background="#366EC0" CornerRadius="2" Padding="2" Margin="10 0">
+                        <Border.Effect>
+                            <DropShadowEffect/>
+                        </Border.Effect>
+                        <Button x:Name="btn_showAllReport" Background="Transparent" BorderThickness="0" Foreground="White" Click="btn_showAllReport_Click">Просмотр отчётов</Button>
+                    </Border>
+                </StackPanel>
             </Grid>
         </Border>
     </Grid>

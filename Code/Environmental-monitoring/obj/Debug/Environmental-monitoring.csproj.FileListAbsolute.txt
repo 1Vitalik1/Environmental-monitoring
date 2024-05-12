@@ -49,3 +49,9 @@ C:\Users\Perfi\Desktop\Environmental-monitoring\Code\Environmental-monitoring\bi
 C:\Users\Perfi\Desktop\Environmental-monitoring\Code\Environmental-monitoring\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Perfi\Desktop\Environmental-monitoring\Code\Environmental-monitoring\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Perfi\Desktop\Environmental-monitoring\Code\Environmental-monitoring\obj\Debug\Environmental-monitoring.csproj.CopyComplete
+C:\Users\Perfi\Desktop\Environmental-monitoring\Code\Environmental-monitoring\obj\Debug\UiPage\AllUsers.g.cs
+C:\Users\Perfi\Desktop\Environmental-monitoring\Code\Environmental-monitoring\obj\Debug\UiPage\AllUsers.baml
+C:\Users\Perfi\Desktop\Environmental-monitoring\Code\Environmental-monitoring\obj\Debug\UiPage\AddUser.g.cs
+C:\Users\Perfi\Desktop\Environmental-monitoring\Code\Environmental-monitoring\obj\Debug\UiPage\AddUser.baml
+C:\Users\Perfi\Desktop\Environmental-monitoring\Code\Environmental-monitoring\obj\Debug\UiPage\showAllReport.g.cs
+C:\Users\Perfi\Desktop\Environmental-monitoring\Code\Environmental-monitoring\obj\Debug\UiPage\showAllReport.baml
