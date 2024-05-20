@@ -13,7 +13,7 @@ namespace Environmental_monitoring.UiPage
             Database database = new Database();
             foreach(user user in database.users)
             {
-                listBox_allUsers.Items.Add(user.ToString());
+                listBoxAllUsers.Items.Add(user.ToString());
             }
         }
     }

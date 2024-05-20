@@ -5,7 +5,7 @@ using System.Windows.Input;
 namespace Environmental_monitoring.UiWindows
 {
     /// <summary>
-    /// Логика взаимодействия для UserLogin.xaml
+    /// Код обработки окна входа в информационную систему
     /// </summary>
     public partial class UserLogin : Window
     {
@@ -14,7 +14,7 @@ namespace Environmental_monitoring.UiWindows
         public UserLogin()
         {
             InitializeComponent();
-            label_SQL_Status.Content = database.statusConnectToDatabase();
+            labelSqlStatus.Content = database.statusConnectToDatabase();
         }
 
         private void btn_sand_MouseDown(object sender, MouseButtonEventArgs e)
@@ -31,7 +31,7 @@ namespace Environmental_monitoring.UiWindows
                 ((MainWindow)Application.Current.MainWindow).showWindow();
                 this.Close();
             }
-            else label_SQL_Status.Content = "Неправильно введён логин или пароль!";
+            else labelSqlStatus.Content = "Неправильно введён логин или пароль!";
             
         }
 

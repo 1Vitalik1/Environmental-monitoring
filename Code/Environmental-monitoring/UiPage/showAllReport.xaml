@@ -19,14 +19,14 @@
                     <Border BorderBrush="#366EC0" BorderThickness="0,0,0,2" CornerRadius="5">
                         <StackPanel Orientation="Horizontal">
                             <Label VerticalAlignment="Center" Foreground="White" FontWeight="Bold">Отчёт №:</Label>
-                            <ComboBox x:Name="comboBox_allReport" Width="150" Height="20" Margin="15,0"></ComboBox>
+                            <ComboBox x:Name="comboBoxAllReport" Width="150" Height="20" Margin="15,0"></ComboBox>
                             <Button x:Name="btn_readData" Margin="4,6" Click="btn_readData_Click">Получить данные</Button>
                         </StackPanel>
                         
                     </Border>
                 </Grid>
                 <Grid Grid.Row="1">
-                    <ListBox x:Name="listBox_report" Background="#181A24" Foreground="White" BorderThickness="0" Margin="5"></ListBox>
+                    <ListBox x:Name="listBoxReport" Background="#181A24" Foreground="White" BorderThickness="0" Margin="5"></ListBox>
                 </Grid>
 
             </Grid>

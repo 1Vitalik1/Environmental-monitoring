@@ -15,7 +15,7 @@
                         <Label.Effect>
                             <DropShadowEffect/>
                         </Label.Effect> Все пользователи:</Label>
-                    <ListBox x:Name="listBox_allUsers" Background="#181A24" Foreground="White" BorderThickness="0" Margin="5"/>
+                    <ListBox x:Name="listBoxAllUsers" Background="#181A24" Foreground="White" BorderThickness="0" Margin="5"/>
                 </StackPanel>
             </Grid>
         </Border>

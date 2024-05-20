@@ -27,13 +27,13 @@
                                 <StackPanel Orientation="Horizontal" Margin="10">
                                     <Label Width="55" Foreground="White">Логин:</Label>
                                     <Border Width="150" BorderThickness="0,0,0,1" BorderBrush="#366EC0" CornerRadius="5">
-                                        <TextBox x:Name="textBox_login" Background="Transparent" BorderThickness="0" Foreground="White" CaretBrush="WhiteSmoke"></TextBox>
+                                        <TextBox x:Name="textBoxLogin" Background="Transparent" BorderThickness="0" Foreground="White" CaretBrush="WhiteSmoke"></TextBox>
                                     </Border>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Margin="10">
                                     <Label Width="55" Foreground="White">Пароль:</Label>
                                     <Border Width="150" BorderThickness="0,0,0,1" BorderBrush="#366EC0" CornerRadius="5">
-                                        <TextBox x:Name="textBox_password" Background="Transparent" BorderThickness="0" Foreground="White" CaretBrush="WhiteSmoke"></TextBox>
+                                        <TextBox x:Name="textBoxPassword" Background="Transparent" BorderThickness="0" Foreground="White" CaretBrush="WhiteSmoke"></TextBox>
                                     </Border>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Margin="10">
@@ -49,19 +49,19 @@
                                 <StackPanel Orientation="Horizontal" Margin="10">
                                     <Label Width="65" Foreground="White">Имя:</Label>
                                     <Border Width="150" BorderThickness="0,0,0,1" BorderBrush="#366EC0" CornerRadius="5">
-                                        <TextBox x:Name="textBox_firstname" Background="Transparent" BorderThickness="0" Foreground="White" CaretBrush="WhiteSmoke"></TextBox>
+                                        <TextBox x:Name="textBox_Firstname" Background="Transparent" BorderThickness="0" Foreground="White" CaretBrush="WhiteSmoke"></TextBox>
                                     </Border>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Margin="10">
                                     <Label Width="65" Foreground="White">Фамилия:</Label>
                                     <Border Width="150" BorderThickness="0,0,0,1" BorderBrush="#366EC0" CornerRadius="5">
-                                        <TextBox x:Name="textBox_lastname" Background="Transparent" BorderThickness="0" Foreground="White" CaretBrush="WhiteSmoke"></TextBox>
+                                        <TextBox x:Name="textBoxLastname" Background="Transparent" BorderThickness="0" Foreground="White" CaretBrush="WhiteSmoke"></TextBox>
                                     </Border>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Margin="10">
                                     <Label Width="65" Foreground="White">Отчество:</Label>
                                     <Border Width="150" BorderThickness="0,0,0,1" BorderBrush="#366EC0" CornerRadius="5">
-                                        <TextBox x:Name="textBox_surname" Background="Transparent" BorderThickness="0" Foreground="White" CaretBrush="WhiteSmoke"></TextBox>
+                                        <TextBox x:Name="textBoxSurname" Background="Transparent" BorderThickness="0" Foreground="White" CaretBrush="WhiteSmoke"></TextBox>
                                     </Border>
                                 </StackPanel>
                             </StackPanel>
@@ -99,7 +99,7 @@
                     </Grid>
                     </Border>
                 </StackPanel>
-                <Label x:Name="label_status" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold">
+                <Label x:Name="labelStatus" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold">
                     <Label.Effect>
                         <DropShadowEffect/>
                     </Label.Effect> SoftWare by VitaliyPerfilov

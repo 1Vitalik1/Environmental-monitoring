@@ -5,6 +5,10 @@ using System.Data;
 
 namespace Environmental_monitoring
 {
+    /// <summary>
+    /// Класс взаимодействия программы с БД
+    /// Позволяет создавать обращения к БД удаление, редактирование и добавление различной информации
+    /// </summary>
     internal class Database
     {
         public Collection<user> users = new Collection<user>();
@@ -17,8 +21,7 @@ namespace Environmental_monitoring
         static string connect = ($"Server={server};Port={port};Database={dataBase};Uid={uid};Pwd={pwd};");
         static MySqlConnection connection;
         static MySqlCommand command;
-        static MySqlDataReader Reader;
-
+        static MySqlDataReader reader;
         public Database()
         {
             connection = new MySqlConnection(connect);
@@ -38,23 +41,20 @@ namespace Environmental_monitoring
             else if(connection.State == ConnectionState.Closed) return "Подключение к БД закрыто!";
             else return "Ошибка!"; 
         }
-
-
-        
         public void authenticationUser()
         {
             int userIterator = 0;
             command.CommandText = "SELECT * FROM `employee`";
-            Reader = command.ExecuteReader();
-            while (Reader.Read())
+            reader = command.ExecuteReader();
+            while (reader.Read())
             {
-                long id = Reader.GetInt64("id_employee");
-                string login = Reader.GetString("login");
-                string password = Reader.GetString("password");
-                string lastName = Reader.GetString("lastname");
-                string firstName = Reader.GetString("firstname");
-                string surName = Reader.GetString("surname");
-                decimal phonenumber = Reader.GetInt64("phonenumber");
+                long id = reader.GetInt64("id_employee");
+                string login = reader.GetString("login");
+                string password = reader.GetString("password");
+                string lastName = reader.GetString("lastname");
+                string firstName = reader.GetString("firstname");
+                string surName = reader.GetString("surname");
+                decimal phonenumber = reader.GetInt64("phonenumber");
                 users.Add(new user(id, login, password, lastName, firstName, surName, phonenumber));
                 userIterator++;
             }
@@ -62,28 +62,29 @@ namespace Environmental_monitoring
 
         public string addUser(string login, string password, string firstname, string lastname, string surname, string phonenumber)
         {
-            //INSERT INTO `employee` (`Id`, `Login`, `Password`, `Firstname`, `Lastname`, `Surname`, `Phonenumber`) VALUES ('0', 'Morik', '301005', 'Katya', 'Krasina', 'Viktorovna', '7920643100')
+            
             try
             {
-                Reader.Close();
-                command.CommandText = ($"INSERT INTO `employee` (`Id`, `Login`, `Password`, `Firstname`, `Lastname`, `Surname`, `Phonenumber`) VALUES ('0', '{login}', '{password}', '{firstname}', '{lastname}', '{surname}', '{phonenumber}')");
+                reader.Close();
+                command.CommandText = ($"INSERT INTO `employee` (`id_employee`, `Login`, `Password`, `Firstname`, `Lastname`, `Surname`, `Phonenumber`) VALUES ('0', '{login}', '{password}', '{firstname}', '{lastname}', '{surname}', '{phonenumber}')");
                 command.ExecuteNonQuery();
                 authenticationUser();
                 return "Пользователь успешно создан!";
             }
-            catch {return "Извините произошла ошибка!";}
+            catch 
+            {
+                return "Извините произошла ошибка!";
+            }
         }
         public string delUser(string id)
         {
-            try
-            {
-                Reader.Close();
-                command.CommandText = ($"DELETE FROM `employee` WHERE `employee`.`Id` = {id}");
-                command.ExecuteNonQuery();
-                authenticationUser();
-                return "Пользователь удалён!";
-            }
-            catch { return "Извините произошла ошибка!"; }
+
+            reader.Close();
+            command.CommandText = ($"DELETE FROM `employee` WHERE `employee`.`Id_employee` = {id}");
+            command.ExecuteNonQuery();
+            authenticationUser();
+            return "Пользователь удалён!";
+
         }
 
         public bool identification(string login, string password)
@@ -94,33 +95,37 @@ namespace Environmental_monitoring
 
         public void readAllReports()
         {
-            int Iterator = 0;
-            Reader.Close();
+            int iterator = 0;
+            reader.Close();
             command.CommandText = "SELECT * FROM `reports`";
-            Reader = command.ExecuteReader();
-            while (Reader.Read())
+            reader = command.ExecuteReader();
+            while (reader.Read())
             {
-                Int64 id = Reader.GetInt64("id_report");
-                int airData = Reader.GetInt32("id_AirData");
-                int radioactiveData = Reader.GetInt32("id_RadioactiveData");
-                int soilData = Reader.GetInt32("id_SoilData");
-                int waterData = Reader.GetInt32("id_WaterData");
-                string description = Reader.GetString("Description");
-                DateTime date = Reader.GetDateTime("Date");
+                long id = reader.GetInt64("id_report");
+                int airData = reader.GetInt32("id_AirData");
+                int radioactiveData = reader.GetInt32("id_RadioactiveData");
+                int soilData = reader.GetInt32("id_SoilData");
+                int waterData = reader.GetInt32("id_WaterData");
+                string description = reader.GetString("Description");
+                DateTime date = reader.GetDateTime("Date");
                 reports.Add(new report(id,date,description,airData,radioactiveData,soilData,waterData));
-                Iterator++;
+                iterator++;
             }
         }
-
+        /// <summary>
+        /// Позволяет считать данные из БД, в параметры передаётся комманда 
+        /// </summary>
+        /// <param name="commandText">Текст команды для считывания данных</param>
+        /// <returns></returns>
         public string readData(string commandText)
         {
-            Reader.Close();
+            reader.Close();
             command.CommandText = commandText;
-            Reader = command.ExecuteReader();
+            reader = command.ExecuteReader();
             string thisrow = "";
-            while (Reader.Read())
-                for (int i = 0; i < Reader.FieldCount; i++)
-                    thisrow += Reader.GetValue(i).ToString() + ";";
+            while (reader.Read())
+                for (int i = 0; i < reader.FieldCount; i++)
+                    thisrow += reader.GetValue(i).ToString() + ";";
             return thisrow;
         }
 
@@ -146,6 +151,9 @@ namespace Environmental_monitoring
             this.waterData = waterData;
         }
     }
+    /// <summary>
+    /// Класс описывающий пользователя ИС
+    /// </summary>
     class user
     {
         public long id { private set; get; }

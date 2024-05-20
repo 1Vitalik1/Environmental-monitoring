@@ -30,7 +30,7 @@
                     </StackPanel>
                 </Grid>
                 <Grid Grid.Column="1">
-                    <Label x:Name="label_SQL_Status" HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="White">Подключение к БД не установлено</Label>
+                    <Label x:Name="labelSqlStatus" HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="White">Подключение к БД не установлено</Label>
                     <Border Margin="30 120" Background="#181A24" CornerRadius="15">
                         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label HorizontalAlignment="Center" Foreground="White" FontSize="15" FontWeight="Black">Environmental-monitoring</Label>
